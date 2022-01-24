@@ -8,9 +8,21 @@ import { HeaderControl } from "./headerControl/HeaderControl";
 export const Header = () => {
   return (
     <React.Fragment>
-      <img src={desktop} className={classes.desktopImg} />
-      <img src={tablet} className={classes.tabletImg} />
-      <img src={mobile} className={classes.mobileImg} />
+      <img
+        alt="desktop background picture"
+        src={desktop}
+        className={classes.desktopImg}
+      />
+      <img
+        alt="tablet background picture"
+        src={tablet}
+        className={classes.tabletImg}
+      />
+      <img
+        alt="mobile background picture"
+        src={mobile}
+        className={classes.mobileImg}
+      />
       <HeaderControl></HeaderControl>
     </React.Fragment>
   );

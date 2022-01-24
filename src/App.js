@@ -10,7 +10,6 @@ import React, { useState } from "react";
 import ThemeContext from "./context/theme-context";
 
 function App() {
-  const [isFiltering, setIsFiltering] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const value = { isDark, setIsDark };
 

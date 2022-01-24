@@ -1,6 +1,6 @@
-import { faCheck, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useRef } from "react";
+import React, { useContext } from "react";
 import ThemeContext from "../../../context/theme-context";
 import { ButtonComponent } from "../../ui/buttonComponent/ButtonComponent";
 import TextInput from "../../ui/textInput/TextInput";
@@ -8,7 +8,7 @@ import classes from "./FilterModal.module.css";
 
 const FilterModal = React.forwardRef(
   ({ isOpen, closeModal, submitModal }, { locationRef, timeRef }) => {
-    const { isDark, setIsDark } = useContext(ThemeContext);
+    const { isDark } = useContext(ThemeContext);
     if (!isOpen) return null;
 
     return (

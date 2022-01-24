@@ -4,7 +4,7 @@ import ThemeContext from "../../../context/theme-context";
 import classes from "./HeaderControl.module.css";
 
 export const HeaderControl = () => {
-  const { isDark, setIsDark } = useContext(ThemeContext);
+  const { setIsDark } = useContext(ThemeContext);
   return (
     <div className={classes.innerContainer}>
       <Link to="/" className={classes.text}>
