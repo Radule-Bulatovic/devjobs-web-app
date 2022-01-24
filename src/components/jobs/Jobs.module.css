@@ -1,0 +1,25 @@
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container > * {
+  flex: 1 0 25%;
+}
+
+.container + button {
+  margin: 5rem;
+}
+
+.buttonText {
+  margin: 0 1rem;
+}
+
+@media only screen and (max-device-width: 700px) {
+  .container > * {
+    flex-basis: 80%;
+  }
+}

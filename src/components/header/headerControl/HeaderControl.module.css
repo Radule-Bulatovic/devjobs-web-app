@@ -1,0 +1,93 @@
+.innerContainer {
+  width: 80%;
+  height: 12vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.innerContainer a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch::before {
+  position: absolute;
+  content: url("../../../assets/desktop/icon-sun.svg");
+  left: 0;
+  top: 50%;
+  transform: translate(-150%, -46%);
+}
+
+.switch::after {
+  position: absolute;
+  content: url("../../../assets/desktop/icon-moon.svg");
+  right: 0;
+  top: 50%;
+  transform: translate(200%, -53%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  bottom: 7px;
+  background-color: var(--clr-violet);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:hover + .slider:before {
+  background-color: var(--clr-light-violet);
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}

@@ -1,0 +1,6 @@
+.cardContainer {
+  background: var(--clr-white);
+  border-radius: 0.5rem;
+  width: 80%;
+  transform: translate(0, -2rem);
+}

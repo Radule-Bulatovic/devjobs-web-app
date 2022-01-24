@@ -1,0 +1,128 @@
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-white);
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.container > * {
+  width: 85%;
+}
+
+h2 {
+  color: var(--clr-text);
+}
+
+.headerContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.headerContainer h2 {
+  margin: 0.5rem 0;
+}
+
+.headerContainer p {
+  margin: 0;
+}
+
+.headerContainer button {
+  margin-top: 3rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  color: var(--clr-dark-gray);
+}
+
+.dot {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--clr-dark-gray);
+  margin: 0 1rem;
+}
+
+.location {
+  color: var(--clr-violet);
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+.grayText {
+  color: var(--clr-dark-gray);
+}
+
+.item {
+  width: 70%;
+  position: relative;
+  left: 1rem;
+}
+.container li {
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+.container ::marker {
+  color: var(--clr-violet);
+  font-weight: 900;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-white);
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+}
+
+.footerDetails {
+  display: none;
+  margin-left: 10%;
+}
+
+.footer h2,
+.footer p {
+  margin: 0;
+}
+
+.footer h2 {
+  margin-bottom: 0.5rem;
+}
+
+.footer button {
+  width: 100%;
+  margin: 0 10%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+@media screen and (min-width: 568px) {
+  .headerContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .headerContainer button {
+    margin: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .footerDetails {
+    display: unset;
+  }
+
+  .footer button {
+    width: unset;
+  }
+}

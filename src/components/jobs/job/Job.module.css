@@ -1,0 +1,61 @@
+.container {
+  position: relative;
+  background-color: var(--clr-white);
+  border-radius: 0.25rem;
+  margin: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 2rem;
+}
+
+h3 {
+  color: var(--clr-text);
+}
+
+.container:hover h3 {
+  color: var(--clr-dark-gray);
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  color: var(--clr-dark-gray);
+}
+
+.dot {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--clr-dark-gray);
+  margin: 0 1rem;
+}
+
+.company {
+  color: var(--clr-dark-gray);
+}
+
+.location {
+  color: var(--clr-violet);
+  font-weight: 900;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-device-width: 568px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

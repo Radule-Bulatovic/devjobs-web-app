@@ -1,38 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans");
+
+:root {
+  --clr-violet: #5964e0;
+  --clr-light-violet: #939bf4;
+  --clr-very-dark-blue: #19202d;
+  --clr-midnight: #121721;
+  --clr-dark-gray: #6e8098;
+  --clr-gray: #9daec2;
+  --clr-text: black;
+  --clr-filter-icon: var(--clr-dark-gray);
+
+  --clr-white: #ffffff;
+  --clr-light-gray: #f4f6f8;
+
+  /* Checkbox */
+  --clr-checkbox: #e7e8e9;
+  --clr-checkbox-hov: #d5d8f7;
+  --clr-checkbox-active: #5964e0;
+
+  /* Buttons */
+  --clr-light-button: #eef0fc;
+  --clr-light-button-hov: #c5c9f4;
+  --clr-dark-button: #303642;
+  --clr-dark-button-hov: #696e76;
+}
+
+body {
+  background-color: var(--clr-light-gray);
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+input {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  background: var(--clr-light-gray);
+  min-height: 100vh;
+}
+
+.dark {
+  --clr-text: white;
+  --clr-filter-icon: white;
+  --clr-white: var(--clr-very-dark-blue);
+  --clr-light-gray: var(--clr-midnight);
+  --clr-checkbox: #313743;
+  --clr-light-button: var(--clr-dark-button);
+  --clr-light-button-hov: var(--clr-dark-button-hov);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background: var(--clr-checkbox);
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+}
+
+input[type="checkbox"]:hover {
+  background-color: var(--clr-checkbox-hov);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--clr-checkbox-active);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="checkbox"]:checked::after {
+  position: absolute;
+  content: "";
+  border: 2px solid white;
+  border-left: 0;
+  border-top: 0;
+  width: 25%;
+  height: 50%;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg) translate(90%, -30%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.check {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .check {
+  display: unset;
 }

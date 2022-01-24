@@ -1,0 +1,30 @@
+.btn {
+  font-family: "Kumbh Sans", sans-serif;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 1rem;
+  font-weight: 900;
+  background-color: var(--clr-light-button);
+  color: var(--clr-violet);
+}
+
+.btn:hover {
+  background-color: var(--clr-light-button-hov);
+}
+
+.btnViolet {
+  font-family: "Kumbh Sans", sans-serif;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 0;
+  padding: 1rem;
+  font-weight: 900;
+  padding: 1rem;
+  background-color: var(--clr-violet);
+  color: white;
+}
+
+.btnViolet:hover {
+  background-color: var(--clr-light-violet);
+}

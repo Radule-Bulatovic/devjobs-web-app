@@ -1,0 +1,37 @@
+.fullTimeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileImg,
+.tabletImg,
+.desktopImg {
+  width: 100%;
+}
+
+.tabletImg,
+.desktopImg {
+  display: none;
+}
+
+@media only screen and (min-device-width: 568px) and (max-device-width: 1024px) {
+  .mobileImg,
+  .desktopImg {
+    display: none;
+  }
+
+  .tabletImg {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mobileImg,
+  .tabletImg {
+    display: none;
+  }
+  .desktopImg {
+    display: unset;
+  }
+}

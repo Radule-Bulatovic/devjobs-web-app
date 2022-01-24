@@ -1,0 +1,27 @@
+.inputContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: white;
+  color: dodgerblue;
+  text-align: center;
+  height: 100%;
+}
+
+/* Style the input fields */
+.inputField {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  background-color: var(--clr-white);
+  color: var(--clr-text);
+}
