@@ -15,14 +15,23 @@ const Filter = ({ dataFunction }) => {
   const searchRef = useRef();
   const locationRef = useRef();
   const timeRef = useRef();
+  const modalTimeRef = useRef();
+  const modalLocationRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
     setIsOpen(false);
   };
 
-  const submitSearch = () => {
-    console.log(locationRef);
+  const modalSubmitHandler = () => {
+    dataFunction({
+      search: searchRef.current.value,
+      location: modalLocationRef.current.value,
+      time: modalTimeRef.current.checked,
+    });
+  };
+
+  const submitHandler = () => {
     dataFunction({
       search: searchRef.current.value,
       location: locationRef.current.value,
@@ -34,13 +43,13 @@ const Filter = ({ dataFunction }) => {
       {reactDom.createPortal(
         <FilterModal
           ref={{
-            locationRef,
-            timeRef,
+            modalLocationRef,
+            modalTimeRef,
           }}
           isOpen={isOpen}
           closeModal={closeModal}
           submitModal={() => {
-            submitSearch();
+            modalSubmitHandler();
           }}
         />,
         document.getElementById("modal-root")
@@ -96,7 +105,7 @@ const Filter = ({ dataFunction }) => {
       </button>
       <ButtonComponent
         onClick={() => {
-          submitSearch();
+          submitHandler();
         }}
         isViolet={true}
       >

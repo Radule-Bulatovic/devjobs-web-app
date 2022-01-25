@@ -9,8 +9,6 @@ export const Jobs = ({
 }) => {
   const [jobNumber, setJobNumber] = useState(9);
 
-  console.log(location);
-
   let filtered = data.filter((e) => {
     return (
       (e.company.toLowerCase().search(search.toLowerCase()) >= 0 ||

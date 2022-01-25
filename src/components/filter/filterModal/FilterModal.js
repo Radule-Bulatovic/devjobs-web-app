@@ -7,16 +7,22 @@ import TextInput from "../../ui/textInput/TextInput";
 import classes from "./FilterModal.module.css";
 
 const FilterModal = React.forwardRef(
-  ({ isOpen, closeModal, submitModal }, { locationRef, timeRef }) => {
+  ({ isOpen, closeModal, submitModal }, { modalLocationRef, modalTimeRef }) => {
     const { isDark } = useContext(ThemeContext);
+
     if (!isOpen) return null;
 
     return (
       <>
-        <div className={classes.darkOverlay} onClick={closeModal}></div>
-        <div className={`${classes.container} ${isDark ? "dark" : ""}`}>
+        <div
+          className={classes.darkOverlay}
+          onClick={() => {
+            closeModal();
+          }}
+        ></div>
+        <div className={[classes.container, isDark && "dark"].join(" ")}>
           <TextInput
-            ref={locationRef}
+            ref={modalLocationRef}
             className={classes.locationInput}
             id={"location"}
             placeholder={"Filter by location..."}
@@ -37,7 +43,7 @@ const FilterModal = React.forwardRef(
           </TextInput>
           <div className={classes.innerContainer}>
             <div className={classes.fullTimeContainer}>
-              <input id="full-time" type="checkbox" ref={timeRef} />
+              <input id="full-time" type="checkbox" ref={modalTimeRef} />
               <label htmlFor="full-time">
                 Full Time <span className={classes.only}>Only</span>
               </label>
