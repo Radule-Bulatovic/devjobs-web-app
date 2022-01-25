@@ -9,20 +9,12 @@ export const Header = () => {
   return (
     <React.Fragment>
       <img
-        alt="desktop background picture"
+        alt="desktop background"
         src={desktop}
         className={classes.desktopImg}
       />
-      <img
-        alt="tablet background picture"
-        src={tablet}
-        className={classes.tabletImg}
-      />
-      <img
-        alt="mobile background picture"
-        src={mobile}
-        className={classes.mobileImg}
-      />
+      <img alt="tablet background" src={tablet} className={classes.tabletImg} />
+      <img alt="mobile background" src={mobile} className={classes.mobileImg} />
       <HeaderControl></HeaderControl>
     </React.Fragment>
   );
