@@ -4,9 +4,8 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import reactDom from "react-dom";
-import { useState } from "react/cjs/react.development";
 import { ButtonComponent } from "../ui/buttonComponent/ButtonComponent";
 import TextInput from "../ui/textInput/TextInput";
 import classes from "./Filter.module.css";
